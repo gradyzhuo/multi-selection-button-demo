@@ -1,0 +1,14 @@
+<div class="container-tabbar" [ngClass]="tabbarStyle">
+  <app-tabbar
+    [selectedIndex]="selectedIndex"
+    [style]="tabbarStyle"
+    [tabs]="viewModels | pluck : 'tabItem'"
+    (selectedTabChanged$)="_changeTab($event)"
+  ></app-tabbar>
+</div>
+
+<div class="tab-content">
+  <div [cdkPortalOutlet]="currentPortal"></div>
+</div>
+
+<ng-content select="[cdkPortal]"></ng-content>

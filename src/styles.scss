@@ -1,0 +1,124 @@
+@use '@angular/material' as mat;
+
+$theme: mat.define-theme(
+  (
+    color: (
+      theme-type: light,
+      primary: mat.$azure-palette,
+      tertiary: mat.$blue-palette,
+    ),
+  )
+);
+
+body {
+  @include mat.all-component-themes($theme);
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 30px;
+  height: 100%;
+}
+
+html {
+  height: 100%;
+}
+
+@include mat.core();
+@include mat.color-variants-backwards-compatibility($theme);
+
+:root {
+  --mdc-dialog-container-color: transparent; //dialog底色
+
+  /* fonts */
+  --font-noto: 'Noto Sans TC';
+
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  /* font sizes */
+  --font-noto-size-12: 12px;
+  /* Colors */
+
+  /* grey */
+  --color-grey-10: #fcfcfc;
+  --color-grey-15: #f7f7f7;
+  --color-grey-16: #f2f2f2;
+  --color-grey-18: #ededed;
+  --color-grey-20: #e7e7e7;
+  --color-grey-30: #d3d3d3;
+  --color-grey-40: #bebebe;
+  --color-grey-50: #aaa;
+  --color-grey-60: #939393;
+  --color-grey-70: #7d7d7d;
+  --color-grey-80: #686868;
+  --color-grey-90: #535353;
+  --color-grey-100: #333;
+
+  /* blue */
+  --color-blue-10: #eafbff;
+  --color-blue-20: #c5f6ff;
+  --color-blue-30: #a0f0ff;
+  --color-blue-40: #7beaff;
+  --color-blue-50: #56e4ff;
+  --color-blue-60: #30dcfd;
+  --color-blue-70: #14b6d4;
+  --color-blue-80: #0090ab;
+  --color-blue-90: #006e82;
+  --color-blue-100: #004b59;
+
+  /* softblue */
+  --color-softblue-10: #f3fdff;
+  --color-softblue-20: #cef9ff;
+  --color-softblue-30: #aaf4ff;
+  --color-softblue-40: #85f0ff;
+  --color-softblue-50: #73ddec;
+  --color-softblue-60: #5ec1cf;
+  --color-softblue-70: #4ba5b2;
+  --color-softblue-80: #398995;
+  --color-softblue-90: #2a6e78;
+  --color-softblue-100: #1d535a;
+
+  /* calmblue */
+  --color-calmblue-10: #eef9ff;
+  --color-calmblue-20: #c7ecff;
+  --color-calmblue-30: #a1e0ff;
+  --color-calmblue-40: #79d1fc;
+  --color-calmblue-50: #4fbaef;
+  --color-calmblue-60: #3a9ccd;
+  --color-calmblue-70: #2980ab;
+  --color-calmblue-80: #1a6489;
+  --color-calmblue-90: #0f4a67;
+  --color-calmblue-100: #073045;
+
+  --color-action-blue: #008fd6;
+
+  /* green */
+  --color-green-10: #f7fff1;
+  --color-green-20: #e7ffd1;
+  --color-green-30: #d6ffb1;
+  --color-green-40: #c4fd90;
+  --color-green-50: #acf26b;
+  --color-green-60: #8fd053;
+  --color-green-70: #74ae3e;
+  --color-green-80: #5a8c2c;
+  --color-green-90: #426a1c;
+  --color-green-100: #2b4810;
+
+  --color-white-00: #fff;
+
+  --color-error-00: #cc5252;
+  --color-money-00: #ff7373;
+
+  /* Border radiuses */
+  --br-3xs: 10px;
+  --br-8xs: 5px;
+  --br-80xl: 99px;
+
+  /* Gaps */
+  --gap-3xs: 10px;
+  --gap-9xs: 4px;
+  --gap-5xs: 8px;
+
+  /* Paddings */
+  --padding-9xs: 4px;
+  --padding-5xs: 8px;
+  --padding-11xs: 2px;
+}
