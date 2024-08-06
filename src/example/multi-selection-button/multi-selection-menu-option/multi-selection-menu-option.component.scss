@@ -1,0 +1,35 @@
+.container-content {
+  display: flex;
+  flex-direction: row;
+  background-color: #f1f3f5;
+  border-radius: 5px;
+  align-items: center;
+  justify-items: center;
+  padding: 4px 8px;
+  gap: 8px;
+
+  p {
+    color: var(--color-grey-70);
+    font-size: 12px;
+    font-weight: 500;
+  }
+}
+
+.container-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  justify-content: center;
+  height: 16px;
+  width: 16px;
+}
+
+.checked {
+  background-color: var(--color-grey-70);
+
+  p {
+    color: var(--color-white-00);
+  }
+}

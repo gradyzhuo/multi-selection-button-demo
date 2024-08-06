@@ -1,0 +1,17 @@
+<div class="container-content">
+  <p>{{title}}</p>
+  <div class="button-close" (click)="deletedButtonClicked$.emit(id); $event.stopPropagation()">
+    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g id="Icons/No-X-Cancel">
+        <g id="Vector">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M9.35354 2.64645C9.54881 2.84171 9.54881 3.15829 9.35354 3.35355L3.35355 9.35355C3.15829 9.54882 2.84171 9.54882 2.64645 9.35355C2.45118 9.15829 2.45118 8.84171 2.64645 8.64645L8.64644 2.64645C8.8417 2.45118 9.15828 2.45118 9.35354 2.64645Z"
+            fill="#686868" />
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M2.64645 2.64645C2.84171 2.45118 3.15829 2.45118 3.35355 2.64645L9.35354 8.64645C9.54881 8.84171 9.54881 9.15829 9.35354 9.35355C9.15828 9.54882 8.8417 9.54882 8.64644 9.35355L2.64645 3.35355C2.45118 3.15829 2.45118 2.84171 2.64645 2.64645Z"
+            fill="#686868" />
+        </g>
+      </g>
+    </svg>
+  </div>
+</div>

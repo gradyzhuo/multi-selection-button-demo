@@ -1,0 +1,14 @@
+<div class="container-content" [@header]="isActivating() ? 'small' : 'normal'">
+  <div class="container-header" [@icon]="isActivating() ? 'small' : 'normal'">
+    <ng-container *ngTemplateOutlet="icon" ></ng-container>
+  </div>
+  <div class="text-name" [@font]="isActivating() ? 'small' : 'normal'">{{title}}</div>
+  <ng-container *ngIf="counter > 0">
+    <p class="counter">{{counter}}</p>
+  </ng-container>
+</div>
+
+
+<ng-template #icon let-input let-width="width">
+  <img [src]="iconFilePath" />
+</ng-template>

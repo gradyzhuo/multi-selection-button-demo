@@ -1,0 +1,44 @@
+.container-border{
+  display: flex;
+  min-height: 54px;
+  flex-direction: column;
+  background-color: #e6eaeb;
+  backdrop-filter: blur(5px);
+  padding: 12px 10px;
+  gap:4px;
+}
+
+.border-line{
+  border-style: solid;
+  border-color: var(--color-grey-30);
+  border-radius: var(--br-8xs);
+}
+
+.border-line:hover{
+  border-color: var(--color-grey-60);
+}
+
+.filled {
+  margin-bottom: 4px;
+}
+
+.container-content{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+//Menu
+
+.option-menu{
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 12px;
+  border-radius: 5px;
+  background-color: var(--color-white-00);
+  box-shadow: 0px 0px 50px -20px rgba(0, 0, 0, 0.4);
+  text-align: left;
+  gap: 4px;
+}

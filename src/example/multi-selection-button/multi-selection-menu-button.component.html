@@ -1,0 +1,38 @@
+<div
+  #quotingServiceContainer
+  class="border-line container-border"
+  [ngClass]="{'filled': selectedOptions.length>0}"
+  (click)="click($event)"
+  cdkOverlayOrigin
+  #trigger="cdkOverlayOrigin"
+>
+  <multi-selection-button-title
+    [iconFilePath]="optionIconFilePath"
+    [counter]="selectedOptions.length"
+    [title]="model!.name"
+  >
+  </multi-selection-button-title>
+  <div
+    class="container-content"
+    [@content]="selectedOptions.length>0 ? 'display' : 'non-display'"
+  >
+     <ng-container *ngFor="let option of selectedOptions">
+       <multi-selection-tag [id]="option.id" [title]="option.name" (deletedButtonClicked$)="removeItem($event)"></multi-selection-tag>
+     </ng-container>
+ </div>
+</div>
+
+<ng-template
+ cdkConnectedOverlay
+ [cdkConnectedOverlayOrigin]="trigger"
+ [cdkConnectedOverlayOpen]="isDisplayingMenu"
+>
+ <div class="option-menu" cdkMenu [ngStyle]="{'width.px': quotingServiceContainer.offsetWidth }">
+   <ng-container *ngFor="let candidater of model?.options">
+     <section class="example-section">
+       <multi-selection-menu-option [id]="candidater.id" [title]="candidater.name" [checked]="isOptionSelected(candidater.id)" cdkMenuItem (optionChecked$)="selectedItem($event)"></multi-selection-menu-option>
+     </section>
+   </ng-container>
+ </div>
+</ng-template>
+
